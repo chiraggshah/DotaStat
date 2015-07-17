@@ -3,7 +3,7 @@ class SessionsController < ApplicationController
 
   def create
     begin
-      @user = user.from_omniauth request.env['omniauth.auth']
+      @user = User.from_omniauth request.env['omniauth.auth']
     rescue
       flash[:error] = "Can't authorize you"
     else
@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
 
   def destroy
     if current_user
-      session.delete(:user.id)
+      session.delete(:user_id)
       flash[:success] = "Goodbye!"
     end
     redirect_to root_path
