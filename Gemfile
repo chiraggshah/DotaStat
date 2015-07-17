@@ -26,6 +26,9 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 #styling
 gem 'bootstrap-sass'
 
+#steam authentication
+gem 'omniauth-steam'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
