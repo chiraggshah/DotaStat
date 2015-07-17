@@ -29,6 +29,9 @@ gem 'bootstrap-sass'
 #steam authentication
 gem 'omniauth-steam'
 
+# dota gem
+gem 'dota', '~> 0.0.19'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
