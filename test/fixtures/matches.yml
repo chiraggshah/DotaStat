@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  uid: MyString
+  winner: MyString
+  started_at: 2015-07-17 19:29:37
+  mode: MyString
+  match_type: MyString
+  duration: MyString
+  user_id: 
+
+two:
+  uid: MyString
+  winner: MyString
+  started_at: 2015-07-17 19:29:37
+  mode: MyString
+  match_type: MyString
+  duration: MyString
+  user_id: 

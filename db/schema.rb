@@ -11,7 +11,21 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717110541) do
+ActiveRecord::Schema.define(version: 20150717135937) do
+
+  create_table "matches", force: :cascade do |t|
+    t.string   "uid",        limit: 255
+    t.string   "winner",     limit: 255
+    t.datetime "started_at"
+    t.string   "mode",       limit: 255
+    t.string   "match_type", limit: 255
+    t.string   "duration",   limit: 255
+    t.integer  "user_id",    limit: 4
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "matches", ["user_id"], name: "index_matches_on_user_id", using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "uid",         limit: 255
@@ -24,4 +38,5 @@ ActiveRecord::Schema.define(version: 20150717110541) do
 
   add_index "users", ["uid"], name: "index_users_on_uid", unique: true, using: :btree
 
+  add_foreign_key "matches", "users"
 end
